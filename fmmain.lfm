@@ -1,0 +1,139 @@
+object Form1: TForm1
+  Left = 745
+  Height = 285
+  Top = 419
+  Width = 585
+  BorderStyle = bsDialog
+  Caption = 'HunksterGUI v1.0 By RetroNick'
+  ClientHeight = 285
+  ClientWidth = 585
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object InfoLabel: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 28
+    Top = 0
+    Width = 585
+    Alignment = taCenter
+    Anchors = [akTop, akLeft, akRight]
+    AutoSize = False
+    Color = clAppWorkspace
+    Font.Color = clWhite
+    Font.Height = 29
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    OptimalFill = True
+  end
+  object EditFileName: TEdit
+    Left = 96
+    Height = 23
+    Top = 64
+    Width = 272
+    Enabled = False
+    TabOrder = 1
+  end
+  object EditDataName: TEdit
+    Left = 96
+    Height = 23
+    Top = 112
+    Width = 160
+    MaxLength = 20
+    TabOrder = 2
+  end
+  object EditSizeName: TEdit
+    Left = 96
+    Height = 23
+    Top = 160
+    Width = 160
+    MaxLength = 20
+    TabOrder = 3
+  end
+  object MemoryGroup: TRadioGroup
+    Left = 400
+    Height = 130
+    Top = 62
+    Width = 168
+    AutoFill = True
+    Caption = 'Memory Type'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 110
+    ClientWidth = 164
+    ItemIndex = 0
+    Items.Strings = (
+      'Any'
+      'Chip'
+      'Fast'
+    )
+    OnClick = MemoryGroupClick
+    TabOrder = 5
+  end
+  object SaveAs: TButton
+    Left = 480
+    Height = 25
+    Top = 232
+    Width = 75
+    Caption = 'Save As'
+    OnClick = SaveAsClick
+    TabOrder = 6
+  end
+  object InFile: TButton
+    Left = 8
+    Height = 25
+    Top = 64
+    Width = 75
+    Caption = 'In File'
+    OnClick = InFileClick
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Left = 31
+    Height = 15
+    Top = 120
+    Width = 59
+    Caption = 'Data Name'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 15
+    Top = 168
+    Width = 82
+    Caption = 'Data Size Name'
+    ParentColor = False
+  end
+  object EditHunkName: TEdit
+    Left = 96
+    Height = 23
+    Top = 203
+    Width = 160
+    MaxLength = 20
+    TabOrder = 4
+  end
+  object Label4: TLabel
+    Left = 26
+    Height = 15
+    Top = 208
+    Width = 64
+    Caption = 'Hunk Name'
+    ParentColor = False
+  end
+  object OpenDialog: TOpenDialog
+    Options = [ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Left = 544
+  end
+  object SaveDialog: TSaveDialog
+    Options = [ofOverwritePrompt, ofEnableSizing, ofViewDetail]
+    Left = 472
+  end
+end
