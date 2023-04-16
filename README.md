@@ -8,6 +8,7 @@ should work as well. You are just mapping a memory location to a variable/array.
 of your variable/array will be what you imported in hunkster.
 
 extern WORD dataname[];
+
 extern LONG dataname_size;
 
 vc yoursource.c hunkfile.o -o yourprogramname -lauto -lamiga
