@@ -1,0 +1,12 @@
+*.ppu
+*.o
+*.lps
+*uaem
+lib/
+units/
+backup/
+hunkster
+hunkster.exe
+hunkstergui
+hungstergui.exe
+hunkstermui

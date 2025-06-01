@@ -25,22 +25,9 @@ Procedure WriteHunkEnd(var F : File);
 
 Implementation
 
-Function LongToLE(myLongWord : LongWord) : LongWord;
-var
-  Temp : array[1..4] of Byte;
-begin
-  Move(myLongWord,Temp,sizeof(Temp));
-  LongToLE := (Temp[1] shl 24) + (Temp[2] shl 16) + (Temp[3] shl 8) + Temp[4];
-end;
-
-Function WordToLE(myWord : Word) : Word; // if its little endian to will become big endian vice versa
-begin
-  WordToLE:=LO(myWord) SHL 8 + HI(myWord);
-end;
-
 procedure WriteHunk(var F : File; hunk : longword);
 begin
-  Blockwrite(F,LongToLE(hunk),sizeof(hunk));
+  Blockwrite(F,NToBE(hunk),sizeof(hunk));
 end;
 
 Procedure WriteHunkUnit(var F : File);
