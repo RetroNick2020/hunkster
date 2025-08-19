@@ -6,6 +6,9 @@ In your C source code place the data name specified in hunkster as an extern sta
 Note that in Hunkster the data name would be _dataname with an underscore. Other variations 
 should work as well. You are just mapping a memory location to a variable/array. The contents 
 of your variable/array will be what you imported in hunkster.
+
+There is a multi compiler version of this utility called rtbinobj on the main page. This works
+with Windows, DOS, and Linux c/pascal compilers.
 ```
 extern WORD dataname[];
 
